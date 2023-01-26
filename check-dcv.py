@@ -110,7 +110,7 @@ def main():
     # Change INFO LevelName to OK
     logging.addLevelName(logging.INFO, 'OK')
     # Setting output format for Nagios
-    logging.basicConfig(format='%(levelname)s - %(message)s',level=log_level)
+    logging.basicConfig(stream=sys.stdout, format='%(levelname)s - %(message)s', level=log_level)
 
     if warn < crit:
         mylogger.unkown(f'Error : warning value must be greater than critical ( {warn} > {crit} )')
