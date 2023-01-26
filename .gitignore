@@ -4,6 +4,7 @@ config/config.env
 # Virtual environment
 /.venv/
 venv/
+check-dcv.cfg
 
 # Temporary Python files
 *.pyc
