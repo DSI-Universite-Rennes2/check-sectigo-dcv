@@ -24,6 +24,7 @@ source "$BASEDIR/${VENV_DIRNAME}/bin/activate"
 "$BASEDIR/${VENV_DIRNAME}"/bin/pip3 install -r "$LDIR"/requirements.txt
 
 # Add DCV Class to cert_manager lib
-cp "$LDIR/dcv.py" "${BASEDIR}/${VENV_DIRNAME}/lib/python3.8/site-packages/cert_manager/dcv.py"
+CMDESTDIR=$(find "${BASEDIR}/${VENV_DIRNAME}" -type d -name cert_manager)
+cp "$LDIR/dcv.py" "${CMDESTDIR}/dcv.py"
 cd "${BASEDIR}/${VENV_DIRNAME}"
 patch -p1 < "$LDIR/patch-add-dcv.diff"
