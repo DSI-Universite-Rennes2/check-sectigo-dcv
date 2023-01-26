@@ -1,7 +1,7 @@
-diff --git i/lib/python3.8/site-packages/cert_manager/__init__.py w/lib/python3.8/site-packages/cert_manager/__init__.py
+diff --git i/cert_manager/__init__.py w/cert_manager/__init__.py
 index 3fb3f0d..c65763e 100644
---- i/lib/python3.8/site-packages/cert_manager/__init__.py
-+++ w/lib/python3.8/site-packages/cert_manager/__init__.py
+--- i/cert_manager/__init__.py
++++ w/cert_manager/__init__.py
 @@ -4,6 +4,7 @@
  from .acme import ACMEAccount
  from .admin import Admin

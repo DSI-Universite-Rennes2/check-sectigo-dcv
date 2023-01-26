@@ -26,5 +26,5 @@ source "$BASEDIR/${VENV_DIRNAME}/bin/activate"
 # Add DCV Class to cert_manager lib
 CMDESTDIR=$(find "${BASEDIR}/${VENV_DIRNAME}" -type d -name cert_manager)
 cp "$LDIR/dcv.py" "${CMDESTDIR}/dcv.py"
-cd "${BASEDIR}/${VENV_DIRNAME}"
-patch -p1 < "$LDIR/patch-add-dcv.diff"
+cd "$CMDESTDIR"
+patch -p2 < "$LDIR/patch-add-dcv.diff"
