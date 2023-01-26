@@ -29,7 +29,7 @@ then
     PKGS=$(grep -v '#' "$LDIR"/debian-packages.txt | xargs)
     # we WANT word splitting here..
     # shellcheck disable=SC2086
-    apt install $PKGS
+    sudo apt install $PKGS
 fi
 
 # -----------------------------------------------------------------------------
